@@ -100,7 +100,7 @@ int main(){
     cin>>target;
     for(int i = 0; i<rows; i++){
         for(int j = 0; j<col; j++){
-            if(target == a[i][j]){
+            if(target == a[i][j]){ 
                 isFound = true;
                 cout<<target<<" has been found in row: "<<i+1<<" and coloumn: "<<j+1<<" of the original matrix";
                 break;

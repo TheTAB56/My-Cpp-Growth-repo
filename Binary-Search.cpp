@@ -10,12 +10,12 @@ void selection_sort(int* p , int size_of_arr){ // pass &arr[0] from main
             if(p[j]< p[k]){
                 k = j;
             }
-        }
+        }  
         int temp = 0;
         temp = p[i];
         p[i] = p[k];
         p[k] = temp;
-    }
+    } 
 
 
 }
@@ -33,27 +33,15 @@ void insertion_sort(int* p , int size_arr){
             j--;
         }
         p[j+1]= v;
-        /*for(int j =i-1; j>=0;j--){
-            if(v<p[j]){
-                p[j+1]=p[j];
-                if(j==0){
-                    p[j]=v;
-                }
-            }
-
-            else{
-                p[j+1]=v;
-                break;
-            }
-        }*/
+        
     }
 }
 
 void bubble_sort(int* p , int size_of_arr){
 
-    for(int i=0; i<size_of_arr-1;i++){
+    for(int i=0; i<size_of_arr-1;i++){ // checks pass count , pass 1 , pass 2 etc.
         bool flag = false;
-        for(int j=0; j<size_of_arr-1-i; j++){
+        for(int j=0; j<size_of_arr-1-i; j++){ // moves the heaviest element in current pass to the end 
             if(p[j+1]<p[j]){
                 int temp = 0;
                 temp = p[j];
@@ -76,7 +64,7 @@ void binary_search(int* p , int target , int size_arr){
     while(start<=end){
         int middle = (start+end)/2;
 
-        if(p[middle]<target){
+        if(p[middle]<target){ //strict rule:array must be sorted before running this
             start = middle+1;
         }
 
